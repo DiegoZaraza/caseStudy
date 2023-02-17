@@ -18,11 +18,11 @@ project.ext {
 }
 
 dependencies {
-    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: cucumberVersion
-    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: cucumberVersion
-    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
-    testImplementation group: 'org.assertj', name: 'assertj-core', version: assertVersion
-    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: slf4jVersion
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: cucumberVersion
+    implementation group: 'io.cucumber', name: 'cucumber-junit', version: cucumberVersion
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+    implementation group: 'org.assertj', name: 'assertj-core', version: assertVersion
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: slf4jVersion
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: seleniumVersion
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: seleniumVersion
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.0.1'
@@ -45,7 +45,7 @@ task cucumber() {
             args = [
                     '--plugin', 'html:reports/test-report/report.html',
                     '--plugin', 'pretty',
-                    '--glue', 'org.test.steps', 'src/test/resources',
+                    '--glue', 'org.test.steps', 'src/main/resources',
                     '--tags', '@Execution'
             ]
         }

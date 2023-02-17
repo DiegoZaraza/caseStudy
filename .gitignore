@@ -170,3 +170,5 @@ local.properties
 .DS_Store
 
 reports/
+# Ignore Gradle build output directory
+build
